@@ -10,7 +10,8 @@ Deploy Kroki server with CI/CD on Elestio
 
 # Once deployed ...
 
-You can open Kroki Builder UI here:
+You can open Kroki UI here:
 
-    URL: https://[CI_CD_DOMAIN]:8443
-    Login: [ADMIN_EMAIL]
+    URL: https://[CI_CD_DOMAIN]
+    Login: "root"
+    password: "[ADMIN_PASSWORD]"
