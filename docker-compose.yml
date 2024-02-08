@@ -1,0 +1,22 @@
+version: "3"
+services:
+  core:
+    image: yuzutech/kroki:${SOFTWARE_VERSION_TAG}
+    environment:
+      - KROKI_MERMAID_HOST=mermaid
+      - KROKI_BPMN_HOST=bpmn
+      - KROKI_EXCALIDRAW_HOST=excalidraw
+    ports:
+      - "172.17.0.1:17359:8000"
+  mermaid:
+    image: yuzutech/kroki-mermaid:${SOFTWARE_VERSION_TAG}
+    ports:
+      - "172.17.0.1:8002:8002"
+  bpmn:
+    image: yuzutech/kroki-bpmn:${SOFTWARE_VERSION_TAG}
+    ports:
+      - "172.17.0.1:8003:8003"
+  excalidraw:
+    image: yuzutech/kroki-excalidraw:${SOFTWARE_VERSION_TAG}
+    ports:
+      - "172.17.0.1:8004:8004"
