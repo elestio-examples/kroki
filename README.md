@@ -27,9 +27,9 @@ To generate a new diagram, use the following curl command:
 To generate a new diagram using curl command to this format:
 
     curl -o <PATH>/<YOUR_OUTPUT_FILE>.<EXTENSION_FILE> -X POST -u root:[ADMIN_PASSWORD] -H "Content-Type: application/json" -d '{
-        "diagram_source": "digraph G {Hello->World}",
-        "diagram_type": "graphviz",
-        "output_format": "<OUTPUT_FORMAT>",
+     "diagram_source": "digraph G {Hello->World}",
+     "diagram_type": "graphviz",
+     "output_format": "<OUTPUT_FORMAT>",
     }' https://[CI_CD_DOMAIN]/
 
 Replace the placeholders with the appropriate values:
@@ -39,12 +39,12 @@ Replace the placeholders with the appropriate values:
 - `<EXTENSION_FILE>`: The type of output format you desire, such as .svg, .png, .jpeg, or .pdf.
 - `<OUTPUT_FORMAT>`: The format in which you want to generate the diagram (svg, png, jpeg, or pdf).
 
-For example, to generate a PNG image named hello_world.png, run the following command:
+For example, to generate a SVG image named hello_world.svg, run the following command:
 
     curl -o ./hello_world.png -X POST -u root:[ADMIN_PASSWORD] -H "Content-Type: application/json" -d '{
-        "diagram_source": "digraph G {Hello->World}",
-        "diagram_type": "graphviz",
-        "output_format": "png",
+     "diagram_source": "digraph G {Hello->World}",
+     "diagram_type": "graphviz",
+     "output_format": "png",
     }' https://[CI_CD_DOMAIN]/
 
 For more information: https://docs.kroki.io/kroki/setup/usage/
